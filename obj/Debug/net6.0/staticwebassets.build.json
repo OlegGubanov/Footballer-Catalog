@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "rlSTkM+LXyFgYuQwA2spFbPD8A3iDD69VbqBGbPzGSo=",
+  "Source": "Footballer Catalog",
+  "BasePath": "_content/Footballer Catalog",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Footballer Catalog\\wwwroot",
+      "Source": "Footballer Catalog",
+      "ContentRoot": "C:\\Users\\Oleg\\RiderProjects\\Footballer Catalog\\wwwroot\\",
+      "BasePath": "_content/Footballer Catalog",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Oleg\\RiderProjects\\Footballer Catalog\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "SourceId": "Footballer Catalog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Oleg\\RiderProjects\\Footballer Catalog\\wwwroot\\",
+      "BasePath": "_content/Footballer Catalog",
+      "RelativePath": "js/signalr/dist/browser/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Identity": "C:\\Users\\Oleg\\RiderProjects\\Footballer Catalog\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "Footballer Catalog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Oleg\\RiderProjects\\Footballer Catalog\\wwwroot\\",
+      "BasePath": "_content/Footballer Catalog",
+      "RelativePath": "js/signalr/dist/browser/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js"
+    }
+  ]
+}

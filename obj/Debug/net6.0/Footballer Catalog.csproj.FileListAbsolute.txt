@@ -1,0 +1,71 @@
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\appsettings.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.exe
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.deps.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.runtimeconfig.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.pdb
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.csproj.AssemblyReference.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.AssemblyInfoInputs.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.AssemblyInfo.cs
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.csproj.CoreCompileInputs.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\scopedcss\bundle\Footballer Catalog.styles.css
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\refint\Footballer Catalog.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.pdb
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.genruntimeconfig.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\ref\Footballer Catalog.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.csproj.CopyComplete
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.RazorAssemblyInfo.cache
+C:\Users\Oleg\RiderProjects\Footballer Catalog\obj\Debug\net6.0\Footballer Catalog.RazorAssemblyInfo.cs
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\libman.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Footballer Catalog.staticwebassets.runtime.json
+C:\Users\Oleg\RiderProjects\Footballer Catalog\bin\Debug\net6.0\Newtonsoft.Json.dll

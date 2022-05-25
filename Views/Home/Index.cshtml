@@ -1,0 +1,106 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Footballer_Catalog.Models
+@model IEnumerable<Footballer_Catalog.Models.Footballer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Футболисты</title>
+    @Html.ActionLink("Добавить игрока", "Add")
+</head>
+<body>
+<h3>Футболисты</h3>
+<table id="footballers">
+    <tr>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Пол</td>
+        <td>Дата рождения</td>
+        <td>Команда</td>
+        <td>Страна</td>
+    </tr>
+    @foreach (var footballer in Model)
+        {
+            <tr id="@footballer.Id">
+                <td id="Name">@footballer.Name</td>
+                <td id="Surname">@footballer.Surname</td>
+                <td id="Gender">@footballer.Gender</td>
+                <td id="Birthdate">@footballer.Birthdate.ToString("dd/MM/yyyy")</td>
+                <td id="Team">@footballer.Team</td>
+                <td id="Country">@footballer.Country</td>
+                <td>
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@footballer.Id">Изменить</a> |
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@footballer.Id">Удалить</a>
+                </td>
+            </tr>
+        }
+</table>
+<script src="js/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    const hubConnection = new signalR.HubConnectionBuilder()
+                .withUrl("/update")
+                .build();
+    
+
+    let countries = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Enum.GetNames(typeof(Country))));
+    let genders = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Enum.GetNames(typeof(Gender))))
+    
+            hubConnection.on("Edit", function (footballer) {   
+                let updatedFootballer = document.getElementById(footballer.id)
+                updatedFootballer.querySelector('#Name').innerText = footballer.name
+                updatedFootballer.querySelector('#Surname').innerText = footballer.surname
+                updatedFootballer.querySelector('#Gender').innerText = genders[footballer.gender]
+                updatedFootballer.querySelector('#Birthdate').innerText = new Date(footballer.birthdate).toLocaleDateString()
+                updatedFootballer.querySelector('#Team').innerText = footballer.team
+                updatedFootballer.querySelector('#Country').innerText = countries[footballer.country]
+            });
+            
+            hubConnection.on("Add", function (footballer) {
+                let footballers = document.getElementById('footballers').getElementsByTagName('tbody')[0]
+                let newFootballer = footballers.insertRow(footballers.rows.length)
+                newFootballer.setAttribute("id", footballer.id)
+                let keys = Object.keys(footballer)
+                let values = Object.values(footballer)
+                for (let i = 1; i < keys.length; i++) {
+                    let newCell = newFootballer.insertCell()
+                    let text = "value"
+                    let key = keys[i]
+                    let value = values[i]
+                    if (key === "gender")
+                        text = genders[value]
+                    else if (key === "birthdate")
+                        text = new Date(value).toLocaleDateString()
+                    else if (key === "country")
+                        text = countries[value]
+                    else
+                        text = value.toString()
+                    newCell.appendChild(document.createTextNode(text))
+                }
+                let refs = newFootballer.insertCell()
+                let editNode = document.createElement('a');
+                let edithref = "/Home/Edit/" + footballer.id
+                editNode.appendChild(document.createTextNode("Изменить"))
+                editNode.setAttribute("href", edithref)
+                refs.appendChild(editNode)
+                refs.appendChild(document.createTextNode(" | "))
+                let deleteNode = document.createElement('a');
+                let deletehref = "/Home/Delete/" + footballer.id
+                deleteNode.appendChild(document.createTextNode("Удалить"))
+                deleteNode.setAttribute("href", deletehref)
+                refs.appendChild(deleteNode)
+            });
+            
+            hubConnection.on("Delete", function (footballerId) {   
+                            let footballer = document.getElementById(footballerId)
+                            footballer.remove()
+                        });
+            
+            hubConnection.start();
+</script>
+</body>
+</html>

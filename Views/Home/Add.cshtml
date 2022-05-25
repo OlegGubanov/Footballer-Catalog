@@ -1,0 +1,56 @@
+﻿@using Footballer_Catalog.Models
+@model Footballer_Catalog.Models.Footballer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Добавление игрока</title>
+    @Html.ActionLink("К списку игроков", "Index")
+</head>
+<body>
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label">Имя</label>
+        <input type="text" name="Name" asp-for="Name" class="form control" required/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname" class="control-label">Фамилия</label>
+        <input type="text" name="Surname" asp-for="Surname" class="form control" required/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender" class="control-label">Пол</label>
+        @Html.DropDownList("Gender", Html.GetEnumSelectList(typeof(Gender)), "Пол")
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthdate" class="control-label">Дата рождения</label>
+        <input type="date" name="Birthdate" asp-for="Birthdate" class="form control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Team" class="control-label">Команда</label>
+        <input type="text" name="Team" asp-for="Team" class="form control" list="teams" required/>
+        <datalist id="teams"></datalist>
+    </div>
+    <script>
+        let list = document.getElementById('teams')
+        let teams = @Html.Raw(Json.Serialize(ViewBag.Teams))
+        teams.forEach(function (team) {
+            let option = document.createElement('option')
+            option.value = team
+            list.appendChild(option)
+        })
+    </script>
+    <div class="form-group">
+        <label asp-for="Country" class="control-label">Страна</label>
+        @Html.DropDownList("Country", Html.GetEnumSelectList(typeof(Country)), "Страна")
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Добавить игрока"/>
+    </div>
+</form>
+</body>
+</html>
