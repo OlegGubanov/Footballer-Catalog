@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Футболисты</title>
-    @Html.ActionLink("Добавить игрока", "Add")
+    @Html.ActionLink("Добавить игрока", "Add", "Footballers")
 </head>
 <body>
 <h3>Футболисты</h3>
@@ -27,15 +27,15 @@
     @foreach (var footballer in Model)
         {
             <tr id="@footballer.Id">
-                <td id="Name">@footballer.Name</td>
-                <td id="Surname">@footballer.Surname</td>
-                <td id="Gender">@footballer.Gender</td>
-                <td id="Birthdate">@footballer.Birthdate.ToString("dd/MM/yyyy")</td>
-                <td id="Team">@footballer.Team</td>
-                <td id="Country">@footballer.Country</td>
+                <td name="Name">@footballer.Name</td>
+                <td name="Surname">@footballer.Surname</td>
+                <td name="Gender">@footballer.Gender</td>
+                <td name="Birthdate">@footballer.Birthdate.ToString("dd/MM/yyyy")</td>
+                <td name="Team">@footballer.Team.Name</td>
+                <td name="Country">@footballer.Country</td>
                 <td>
-                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@footballer.Id">Изменить</a> |
-                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@footballer.Id">Удалить</a>
+                    <a asp-controller="Footballers" asp-action="Edit" asp-route-id="@footballer.Id">Изменить</a> |
+                    <a asp-controller="Footballers" asp-action="Delete" asp-route-id="@footballer.Id">Удалить</a>
                 </td>
             </tr>
         }
@@ -50,46 +50,41 @@
     let countries = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Enum.GetNames(typeof(Country))));
     let genders = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Enum.GetNames(typeof(Gender))))
     
-            hubConnection.on("Edit", function (footballer) {   
+            hubConnection.on("Edit", function (footballer) {
                 let updatedFootballer = document.getElementById(footballer.id)
-                updatedFootballer.querySelector('#Name').innerText = footballer.name
-                updatedFootballer.querySelector('#Surname').innerText = footballer.surname
-                updatedFootballer.querySelector('#Gender').innerText = genders[footballer.gender]
-                updatedFootballer.querySelector('#Birthdate').innerText = new Date(footballer.birthdate).toLocaleDateString()
-                updatedFootballer.querySelector('#Team').innerText = footballer.team
-                updatedFootballer.querySelector('#Country').innerText = countries[footballer.country]
+                updatedFootballer.querySelector('[name="Name"]').innerText = footballer.name
+                updatedFootballer.querySelector('[name="Surname"]').innerText = footballer.surname
+                updatedFootballer.querySelector('[name="Gender"]').innerText = genders[footballer.gender]
+                updatedFootballer.querySelector('[name="Birthdate"]').innerText = new Date(footballer.birthdate).toLocaleDateString()
+                updatedFootballer.querySelector('[name="Team"]').innerText = footballer.team.name
+                updatedFootballer.querySelector('[name="Country"]').innerText = countries[footballer.country]
             });
             
             hubConnection.on("Add", function (footballer) {
                 let footballers = document.getElementById('footballers').getElementsByTagName('tbody')[0]
                 let newFootballer = footballers.insertRow(footballers.rows.length)
                 newFootballer.setAttribute("id", footballer.id)
-                let keys = Object.keys(footballer)
-                let values = Object.values(footballer)
-                for (let i = 1; i < keys.length; i++) {
-                    let newCell = newFootballer.insertCell()
-                    let text = "value"
-                    let key = keys[i]
-                    let value = values[i]
-                    if (key === "gender")
-                        text = genders[value]
-                    else if (key === "birthdate")
-                        text = new Date(value).toLocaleDateString()
-                    else if (key === "country")
-                        text = countries[value]
-                    else
-                        text = value.toString()
-                    newCell.appendChild(document.createTextNode(text))
-                }
+                let tdName = newFootballer.insertCell()
+                tdName.appendChild(document.createTextNode(footballer.name))
+                let tdSurname = newFootballer.insertCell()
+                tdSurname.appendChild(document.createTextNode(footballer.surname))
+                let tdGender = newFootballer.insertCell()
+                tdGender.appendChild(document.createTextNode(genders[footballer.gender]))
+                let tdBirthdate = newFootballer.insertCell()
+                tdBirthdate.append(document.createTextNode(new Date(footballer.birthdate).toLocaleDateString()))
+                let tdTeam = newFootballer.insertCell()
+                tdTeam.append(document.createTextNode(footballer.team.name))
+                let tdCountry = newFootballer.insertCell()
+                tdCountry.append(document.createTextNode(countries[footballer.country]))
                 let refs = newFootballer.insertCell()
                 let editNode = document.createElement('a');
-                let edithref = "/Home/Edit/" + footballer.id
+                let edithref = "/Footballers/Edit/" + footballer.id
                 editNode.appendChild(document.createTextNode("Изменить"))
                 editNode.setAttribute("href", edithref)
                 refs.appendChild(editNode)
                 refs.appendChild(document.createTextNode(" | "))
                 let deleteNode = document.createElement('a');
-                let deletehref = "/Home/Delete/" + footballer.id
+                let deletehref = "/Footballers/Delete/" + footballer.id
                 deleteNode.appendChild(document.createTextNode("Удалить"))
                 deleteNode.setAttribute("href", deletehref)
                 refs.appendChild(deleteNode)

@@ -15,12 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Oleg\RiderProjects\Footballer Catalog
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Oleg/RiderProjects/Footballer Catalog/Views/Home/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGQuY3NodG1s
+[C:/Users/Oleg/RiderProjects/Footballer Catalog/Views/Footballers/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGJhbGxlcnNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Oleg/RiderProjects/Footballer Catalog/Views/Home/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
+[C:/Users/Oleg/RiderProjects/Footballer Catalog/Views/Footballers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9vdGJhbGxlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Oleg/RiderProjects/Footballer Catalog/Views/Home/Index.cshtml]

@@ -16,4 +16,14 @@
       <Folder Include="wwwroot\js\signalr" />
     </ItemGroup>
 
+    <ItemGroup>
+      <AdditionalFiles Include="Views\Footballers\Add.cshtml" />
+      <AdditionalFiles Include="Views\Footballers\Edit.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="FootballersHub.cs" />
+      <Compile Remove="Models\FootballerContext.cs" />
+    </ItemGroup>
+
 </Project>

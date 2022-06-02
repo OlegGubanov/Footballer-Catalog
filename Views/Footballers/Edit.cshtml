@@ -1,0 +1,52 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Footballer_Catalog.Models
+@model Footballer_Catalog.Models.Footballer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование</title>
+    @Html.ActionLink("К списку игроков", "Index", "Home")
+</head>
+<body>
+<form asp-action="edit" asp-controller="Footballers" asp-route-id="@Model.Id">
+    <div>
+        <label asp-for="Name">Имя</label>
+        <input type="text" asp-for="Name" value="@Model.Name" autocomplete="off" required/>
+    </div>
+    <div>
+        <label asp-for="Surname">Фамилия</label>
+        <input type="text" asp-for="Surname" value="@Model.Surname" autocomplete="off" required/>
+    </div>
+    <div>
+        <label asp-for="Gender">Пол</label>
+        @Html.DropDownList("Gender", Html.GetEnumSelectList(typeof(Gender)), "Пол", new { @value = @Model.Gender})
+    </div>
+    <div>
+        <label asp-for="Birthdate">Дата рождения</label>
+        <input type="date" asp-for="Birthdate" value="@Model.Birthdate.ToString("yyyy-MM-dd")"/>
+    </div>
+    <div>
+        <label asp-for="Team.Name">Команда</label>
+        <input type="text" asp-for="Team.Name" value="@Model.Team.Name" list="teams" autocomplete="off" required/>
+        <datalist id="teams">
+            @foreach (var team in ViewBag.Teams)
+            {
+                <option>@team</option>
+            }
+        </datalist>
+    </div>
+    <div>
+        <label asp-for="Country">Страна</label>
+        @Html.DropDownList("Country", Html.GetEnumSelectList(typeof(Country)), "Страна", new { @value = @Model.Country})
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Изменить данные"/>
+    </div>
+</form>
+</body>
+</html>

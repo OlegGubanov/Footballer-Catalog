@@ -1,5 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Footballer_Catalog.Models;
+using Footballer_Catalog.Services;
+using Footballer_Catalog.Hubs;
+using Footballer_Catalog.Db;
+using Footballer_Catalog.Repositories;
 
 namespace Footballer_Catalog;
 
@@ -18,6 +22,9 @@ public class Startup
         services.AddDbContext<FootballerContext>(options => options.UseSqlServer(connection));
         services.AddControllersWithViews();
         services.AddSignalR();
+        services.AddTransient<IFootballersService, FootballersService>();
+        services.AddScoped<IRepository<Footballer>, FootballerRepository>();
+        services.AddScoped<IRepository<Team>, TeamRepository>();
     }
  
     public void Configure(IApplicationBuilder app)
